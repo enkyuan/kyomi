@@ -120,6 +120,7 @@ export function createFeedRefreshDb(
     select: () => ({
       from: (table: unknown) => ({
         where: () => ({
+          for: () => Promise.resolve(categories),
           limit: () => {
             if (tableName(table) === "feed_category_assignments") {
               return Promise.resolve(

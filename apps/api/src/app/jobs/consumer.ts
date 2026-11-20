@@ -23,7 +23,7 @@ export const WorkerLive = Layer.effectDiscard(
 
     const handle = yield* makeJobHandler;
     const onFailure = yield* makeFailureReporter;
-    const consumerPrefix = `api-worker-${process.pid}`;
+    const consumerPrefix = `api-worker-${crypto.randomUUID()}`;
 
     const consumers = config.JOB_STREAMS.map(
       (streamKey): StreamConsumer<JobFailure> => ({
@@ -36,6 +36,7 @@ export const WorkerLive = Layer.effectDiscard(
             : streamKey === ARTICLE_TRANSLATION_JOBS_STREAM_KEY
               ? TRANSLATION_LEASE_MS + 1000
               : undefined,
+        refillWhileRunning: streamKey === FEED_REFRESH_JOBS_STREAM_KEY,
         count: config.JOB_READ_COUNT,
         concurrency: config.JOB_PROCESS_CONCURRENCY,
         streamMaxLength: config.JOB_STREAM_MAX_LENGTH,

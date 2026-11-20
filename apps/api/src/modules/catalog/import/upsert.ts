@@ -104,6 +104,7 @@ export const upsertCatalogFeeds = Effect.fn("catalog.import.upsertFeeds")(functi
         records.map((record) => ({
           id: crypto.randomUUID(),
           url: record.canonicalUrl,
+          submittedUrl: record.submittedUrl,
           title: record.title,
           description: record.description,
           link: record.link,
@@ -120,6 +121,7 @@ export const upsertCatalogFeeds = Effect.fn("catalog.import.upsertFeeds")(functi
       .onConflictDoUpdate({
         target: feeds.url,
         set: {
+          submittedUrl: sql`coalesce(${feeds.submittedUrl}, excluded.submitted_url)`,
           title: sql`excluded.title`,
           description: sql`excluded.description`,
           link: sql`excluded.link`,

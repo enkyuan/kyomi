@@ -109,7 +109,7 @@ export function isBlockedOutboundIpAddress(
 /** How a name becomes addresses. Tests give `fetchPublic` a fixed answer instead of real DNS. */
 export type ResolveAddresses = (hostname: string) => Promise<readonly string[]>;
 
-const DNS_TIMEOUT_MS = 1_500;
+const DNS_TIMEOUT_MS = 5_000;
 
 export const resolveAddresses: ResolveAddresses = async (hostname) => {
   let timer: ReturnType<typeof setTimeout> | undefined;

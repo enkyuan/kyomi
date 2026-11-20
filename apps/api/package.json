@@ -18,6 +18,8 @@
     "content:document": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/document.ts",
     "content:sanitizer": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/sanitizer.ts",
     "content:urls": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/urls.ts",
+    "feed:freshness": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/freshness.ts",
+    "content:recover": "bunx --no-install dotenvx run -f ../../docker/.env -f .env -- bun src/app/boot/recover.ts",
     "fmt": "oxfmt src",
     "fmt:check": "oxfmt --check src",
     "lint": "oxlint src",

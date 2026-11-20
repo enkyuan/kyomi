@@ -164,11 +164,11 @@ export function RenderHtml({
         runReaderIdleDomEnhancements(node, { layoutMode });
       });
       if (showLinkPreviews) {
-        disposeAllLinkPreviewMounts();
-        linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
+        const cleanup = mountReaderLinkPreviewCards(node);
+        if (cleanup) linkPreviewCleanupsRef.current.push(cleanup);
       }
     },
-    [disposeAllLinkPreviewMounts, layoutMode, showLinkPreviews],
+    [layoutMode, showLinkPreviews],
   );
 
   const scheduleEnhancements = useCallback(
@@ -240,7 +240,13 @@ export function RenderHtml({
     mathRenderedHtmlRef.current = null;
     disposeAllLinkPreviewMounts();
     resetPhotoPreviewTargets();
-  }, [prepared, disposeAllLinkPreviewMounts, resetPhotoPreviewTargets]);
+  }, [
+    prepared,
+    showLinkPreviews,
+    openLinksInNewTab,
+    disposeAllLinkPreviewMounts,
+    resetPhotoPreviewTargets,
+  ]);
 
   useEffect(() => {
     const node = articleBodyRef.current;

@@ -52,7 +52,17 @@ export async function fetchFeedDocument(
 
     if (!response.ok) {
       await cancelResponseBody(response);
-      return { ok: false, error: `HTTP ${response.status}`, httpStatus: response.status };
+      const retry = response.headers.get("retry-after");
+      const delay =
+        retry && (/^\d+$/.test(retry) ? Number(retry) * 1000 : Date.parse(retry) - Date.now());
+      return {
+        ok: false,
+        error: `HTTP ${response.status}`,
+        httpStatus: response.status,
+        ...(typeof delay === "number" && Number.isFinite(delay) && delay > 0
+          ? { retryAfterMs: Math.min(delay, 30 * 86400000) }
+          : {}),
+      };
     }
 
     const result = await readResponseBodyWithByteLimit(response, { maxBytes: MAX_BYTES });

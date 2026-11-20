@@ -70,12 +70,21 @@ export const feedItems = pgTable(
     authorName: text("author_name"),
     language: text("language"),
     media: jsonb("media"),
+    catalogExpiresAt: timestamp("catalog_expires_at"),
     publishedAt: timestamp("published_at").notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (table) => [
     uniqueIndex("feed_items_feed_id_canonical_url_unique").on(table.feedId, table.canonicalUrl),
+    index("feed_items_catalog_expiry_idx")
+      .on(table.catalogExpiresAt, table.id)
+      .where(sql`${table.catalogExpiresAt} IS NOT NULL`),
+    index("feed_items_extraction_backfill_idx")
+      .on(table.createdAt, table.id)
+      .where(
+        sql`${table.contentSource} = 'link_only' AND ${table.extractedContentStatus} = 'pending' AND ${table.extractedContentUpdatedAt} IS NULL`,
+      ),
     index("feed_items_published_id_idx").on(
       table.publishedAt.desc().nullsFirst(),
       table.id.desc().nullsFirst(),

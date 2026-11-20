@@ -1,3 +1,5 @@
+import { assetLifetime } from "@adapters/assets/freshness";
+import { Assets } from "@adapters/assets/garage";
 import { Data, Effect, Stream } from "effect";
 import type { HttpClientResponse } from "effect/http";
 import { AppLogger } from "@adapters/logger/service";
@@ -6,7 +8,7 @@ import { assertHttpOrHttpsUrl } from "@shared/net/http";
 import { safeFetch, type SafeFetchError } from "@shared/net/safe-fetch";
 
 const READER_IMAGE_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24;
-const READER_IMAGE_CACHE_STALE_SECONDS = 60 * 60 * 24 * 7;
+
 const READER_IMAGE_MAX_BYTES = 8 * 1024 * 1024;
 const READER_IMAGE_TIMEOUT = "8 seconds";
 const READER_IMAGE_MAX_REDIRECTS = 5;
@@ -43,9 +45,9 @@ class ReaderImageMiss extends Data.TaggedError("ReaderImageMiss")<{
 
 type ReaderImage = { readonly contentType: string; readonly bytes: Uint8Array<ArrayBuffer> };
 
-function imageHitHeaders(contentType: string) {
+function imageHitHeaders(contentType: string, ttl: number) {
   return {
-    "Cache-Control": `public, max-age=${READER_IMAGE_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${READER_IMAGE_CACHE_STALE_SECONDS}`,
+    "Cache-Control": ttl > 0 ? `public, max-age=${ttl}` : "no-store",
     "Content-Security-Policy": READER_IMAGE_CONTENT_SECURITY_POLICY,
     "Content-Type": contentType,
     "X-Content-Type-Options": "nosniff",
@@ -73,7 +75,7 @@ function parseSourceUrl(rawUrl: string | null) {
 
 function displayableImageType(response: HttpClientResponse.HttpClientResponse): string | null {
   const contentType = response.headers["content-type"]?.split(";", 1)[0]?.trim().toLowerCase();
-  return contentType?.startsWith("image/") ? contentType : null;
+  return contentType && /^image\/[a-z0-9][a-z0-9.+-]*$/.test(contentType) ? contentType : null;
 }
 
 function declaredLength(response: HttpClientResponse.HttpClientResponse): number | null {
@@ -132,7 +134,7 @@ function fetchFailure(error: SafeFetchError, host: string) {
   return new ReaderImageMiss({ reason, status: 404, host, cause: error });
 }
 
-const fetchImage = Effect.fn("reader.image.fetch")(function* (source: URL) {
+const fetchOriginImage = Effect.fn("reader.image.origin")(function* (source: URL) {
   const host = source.hostname;
   const { response } = yield* safeFetch(source, {
     headers: { Accept: READER_IMAGE_ACCEPT },
@@ -147,7 +149,19 @@ const fetchImage = Effect.fn("reader.image.fetch")(function* (source: URL) {
     return yield* new ReaderImageMiss({ reason: "not_an_image", status: 404, host });
   }
   const bytes = yield* readBoundedBytes(response, host);
-  return { contentType, bytes } satisfies ReaderImage;
+  const asset = { contentType, bytes } satisfies ReaderImage;
+  const ttl = assetLifetime(
+    { get: (name) => response.headers[name] ?? null },
+    READER_IMAGE_CACHE_MAX_AGE_SECONDS,
+  );
+  return {
+    asset,
+    ttl,
+    validators: {
+      etag: response.headers.etag ?? null,
+      lastModified: response.headers["last-modified"] ?? null,
+    },
+  };
 });
 
 /**
@@ -156,13 +170,19 @@ const fetchImage = Effect.fn("reader.image.fetch")(function* (source: URL) {
  */
 export const loadReaderImage = Effect.fn("reader.image.load")(function* (rawUrl: string | null) {
   const source = yield* parseSourceUrl(rawUrl);
-  return yield* fetchImage(source).pipe(
+  const assets = yield* Assets;
+  const key = "article:" + source.href;
+  const saved = yield* assets.get(key, READER_IMAGE_MAX_BYTES);
+  if (saved) return saved;
+  const { asset, ttl, validators } = yield* fetchOriginImage(source).pipe(
     Effect.timeout(READER_IMAGE_TIMEOUT),
     Effect.catchTag("TimeoutError", () =>
       Effect.fail(new ReaderImageMiss({ reason: "timed_out", status: 404, host: source.hostname })),
     ),
     Effect.scoped,
   );
+  yield* assets.put(key, asset, ttl, validators);
+  return { ...asset, ttl };
 });
 
 /** Image fetches that may be open at once, each up to 8 MiB and 8 s; the route is public. */
@@ -171,15 +191,15 @@ const shedReaderImages = makeLoadShedder("reader-image", READER_IMAGE_MAX_IN_FLI
 
 /**
  * Serves a bounded, SSRF-protected remote image for the Expo DOM reader.
- * The public publisher URL remains the source of truth; no image content is persisted here.
+ * The public publisher URL remains the source of truth for the optional private object cache.
  */
 export const serveReaderImage = Effect.fn("reader.image.serve")(function* (requestUrl: string) {
   const log = yield* AppLogger;
   const rawUrl = new URL(requestUrl).searchParams.get("url");
   return yield* shedReaderImages(loadReaderImage(rawUrl)).pipe(
     Effect.map(
-      ({ contentType, bytes }) =>
-        new Response(bytes, { status: 200, headers: imageHitHeaders(contentType) }),
+      ({ contentType, bytes, ttl }) =>
+        new Response(bytes, { status: 200, headers: imageHitHeaders(contentType, ttl) }),
     ),
     Effect.catchTag("ReaderImageMiss", (miss) => {
       const event = miss.reason === "blocked_url" ? log.warn : log.info;

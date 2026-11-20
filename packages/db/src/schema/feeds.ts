@@ -46,6 +46,8 @@ export const feeds = pgTable(
     // Refresh lifecycle is owned by worker/ingestion and read by UI read models.
     // Reads must never mutate these fields.
     refreshStatus: text("refresh_status").notNull().default("idle"),
+    catalogPreview: boolean("catalog_preview").notNull().default(false),
+    subscriberCount: integer("subscriber_count").notNull().default(0),
     refreshGeneration: integer("refresh_generation").notNull().default(0),
     lastRefreshStartedAt: timestamp("last_refresh_started_at"),
     lastRefreshCompletedAt: timestamp("last_refresh_completed_at"),
@@ -63,9 +65,21 @@ export const feeds = pgTable(
   },
   (table) => [
     uniqueIndex("feeds_url_unique").on(table.url),
-    index("feeds_refresh_due_idx")
-      .on(table.nextRefreshAt, table.id)
-      .where(sql`${table.refreshStatus} NOT IN ('running', 'queued')`),
+    index("feeds_subscribed_poll_idx")
+      .on(sql`coalesce(${table.nextRefreshAt}, '-infinity'::timestamp)`, table.id)
+      .where(
+        sql`${table.subscriberCount} > 0 AND ${table.refreshStatus} NOT IN ('running', 'queued')`,
+      ),
+    index("feeds_catalog_poll_idx")
+      .on(sql`coalesce(${table.nextRefreshAt}, '-infinity'::timestamp)`, table.id)
+      .where(
+        sql`${table.subscriberCount} = 0 AND ${table.refreshStatus} NOT IN ('running', 'queued')`,
+      ),
+    index("feeds_lease_idx")
+      .on(table.refreshStatus, table.updatedAt)
+      .where(sql`${table.refreshStatus} IN ('queued','running')`),
+    index("feeds_title_search_idx").using("gin", table.title.asc().op("gin_trgm_ops")),
+    index("feeds_url_search_idx").using("gin", table.url.asc().op("gin_trgm_ops")),
     index("feeds_refresh_status_idx").on(table.refreshStatus, table.id),
     index("feeds_source_kind_idx").on(table.sourceKind, table.id),
     index("feeds_submitted_url_idx")
@@ -186,4 +200,18 @@ export const feedCategoryBackfillStatus = pgTable(
       table.feedId,
     ),
   ],
+);
+
+export const imageAssets = pgTable(
+  "image_assets",
+  {
+    sourceKey: text("source_key").primaryKey(),
+    objectKey: text("object_key").notNull(),
+    contentType: text("content_type").notNull(),
+    size: integer("size").notNull(),
+    etag: text("etag"),
+    lastModified: text("last_modified"),
+    expiresAt: timestamp("expires_at").notNull(),
+  },
+  (table) => [index("image_assets_expiry_idx").on(table.expiresAt, table.sourceKey)],
 );

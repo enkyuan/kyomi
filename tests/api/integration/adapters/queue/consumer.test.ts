@@ -49,11 +49,14 @@ function streamRedis(
     disconnect: () => {
       state.blockingClosed = true;
     },
-    xreadgroup: async () => {
+    xreadgroup: async (...args: unknown[]) => {
       state.reads.push("read");
       const next = batches.shift();
       if (next) {
-        return [["stream", next]];
+        const count = Number(args[args.indexOf("COUNT") + 1]);
+        const entries = next.slice(0, count);
+        if (next.length > count) batches.unshift(next.slice(count));
+        return [["stream", entries]];
       }
       await sleep(5);
       return null;
@@ -64,13 +67,13 @@ function streamRedis(
       state.groups += 1;
       return "OK";
     },
-    call: async () => {
+    call: async (...args: unknown[]) => {
       state.reads.push("claim");
       const thrown = options.claim?.();
       if (thrown instanceof Error) {
         throw thrown;
       }
-      return ["0-0", pending.splice(0)];
+      return ["0-0", pending.splice(0, Number(args[args.indexOf("COUNT") + 1]))];
     },
     eval: async (...args: unknown[]) => {
       state.reads.push("promote");
@@ -144,6 +147,7 @@ function consumer(
     streamKey: "jobs:feed-refresh",
     count: 10,
     concurrency: 2,
+    refillWhileRunning: true,
     streamMaxLength: 5_000,
     blockMs: 5,
     onFailure: () => Effect.void,
@@ -203,6 +207,41 @@ describe("startConsumers", () => {
     expect(redis.state.acked.sort()).toEqual(["1-0", "2-0"]);
     expect(redis.state.groups).toBe(1);
     expect(redis.state.blockingClosed).toBe(true);
+  });
+
+  test("refills a free slot while a slower job from the previous read is still running", async () => {
+    const redis = streamRedis({
+      batches: [[refreshEntry("1-0"), refreshEntry("2-0")], [refreshEntry("3-0")]],
+    });
+    const release = Promise.withResolvers<void>();
+    let running = 0;
+    let peak = 0;
+    const { result } = runUntil(
+      [
+        consumer({
+          concurrency: 2,
+          handle: (message) =>
+            Effect.promise(async () => {
+              peak = Math.max(peak, ++running);
+              if (message.id === "1-0") await release.promise;
+              running--;
+            }),
+        }),
+      ],
+      redis,
+      () => redis.state.acked.length === 3,
+    );
+    try {
+      await waitFor(
+        () => redis.state.acked.includes("3-0"),
+        "the next batch before the slow publisher",
+      );
+      expect(redis.state.acked).not.toContain("1-0");
+      expect(peak).toBe(2);
+    } finally {
+      release.resolve();
+      await result;
+    }
   });
 
   test("a retryable failure waits in the retry set with its error recorded as last_error", async () => {

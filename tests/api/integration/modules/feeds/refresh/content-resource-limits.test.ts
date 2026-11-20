@@ -136,8 +136,8 @@ describe("parseFeedDocument content-resource limits", () => {
       "feed-1",
       "https://example.com/feed.xml",
     );
-    expect(parsed.items[0]?.content).toBeNull();
-    expect(parsed.items[0]?.contentStatus).toBe("pending");
+    expect(parsed.items[0]?.content).toBe("Summary");
+    expect(parsed.items[0]?.contentStatus).toBe("partial");
     expect(parsed.items[0]?.title).toBe("Article 0");
     expect(parsed.contentLimitStats.droppedContentItemCount).toBe(1);
   });
@@ -152,7 +152,7 @@ describe("parseFeedDocument content-resource limits", () => {
       "feed-1",
       "https://example.com/feed.xml",
     );
-    expect(parsed.items[0]?.content).toBeNull();
+    expect(parsed.items[0]?.content).toBe("Summary");
     expect(parsed.contentLimitStats.droppedContentItemCount).toBe(1);
   });
 
@@ -167,7 +167,7 @@ describe("parseFeedDocument content-resource limits", () => {
     );
 
     expect(parsed.items).toHaveLength(itemCount);
-    const droppedForBudget = parsed.items.filter((item) => item.content === null);
+    const droppedForBudget = parsed.items.filter((item) => item.content === "Summary");
     expect(droppedForBudget.length).toBeGreaterThan(0);
     for (const item of droppedForBudget) {
       expect(item.title).toBeTruthy();
@@ -198,4 +198,32 @@ describe("parseFeedDocument content-resource limits", () => {
       ),
     ).toThrow();
   });
+});
+
+test("oversized rich markup can yield a complete bounded text-only body", () => {
+  const markup = `<img src="data:image/png;base64,${"A".repeat(270000)}"/><p>Published words</p><script>hidden()</script>`;
+  const result = parseFeedDocument(
+    `<rss><channel><item><description><![CDATA[${markup}]]></description></item></channel></rss>`,
+    "feed",
+    "https://example.org/rss",
+  );
+  expect(result.items[0]).toMatchObject({
+    contentSource: "text_fallback",
+    contentHtml: null,
+    contentRaw: null,
+    contentText: "Published words",
+  });
+  expect(result.contentLimitStats.acceptedContentBytes).toBeLessThan(64);
+});
+
+test("retains complete text from oversized RSS content before the short publisher description", () => {
+  const full = "A much longer article about the publication. ".repeat(12).trim();
+  const padding = "x".repeat(260 * 1024);
+  const xml = `<rss><channel><item><title>Test</title><description>Excerpt</description>
+    <content:encoded><![CDATA[<p class="${padding}">${full}</p>]]></content:encoded>
+    </item></channel></rss>`;
+  const [item] = parseFeedDocument(xml, "f", "https://example.org/feed").items;
+  expect(item?.summary).toBe("Excerpt");
+  expect(item?.contentText).toBe(full);
+  expect(item?.excerptDigests).toHaveLength(1);
 });

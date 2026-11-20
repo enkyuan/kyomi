@@ -134,6 +134,7 @@ export const feedCategoryAssignments = pgTable(
     uniqueIndex("fcat_feed_cat_prov_model_uidx")
       .on(table.feedId, table.categoryId, table.provenance, table.modelId)
       .where(sql`model_id IS NOT NULL`),
+    index("feed_category_assignments_feed_provenance_idx").on(table.feedId, table.provenance),
     index("feed_category_assignments_category_id_idx").on(table.categoryId),
   ],
 );
@@ -168,6 +169,10 @@ export const feedItemCategoryAssignments = pgTable(
     uniqueIndex("ficat_item_cat_prov_model_uidx")
       .on(table.feedItemId, table.categoryId, table.provenance, table.modelId)
       .where(sql`model_id IS NOT NULL`),
+    index("feed_item_category_assignments_item_provenance_idx").on(
+      table.feedItemId,
+      table.provenance,
+    ),
     index("feed_item_category_assignments_category_id_idx").on(table.categoryId),
   ],
 );

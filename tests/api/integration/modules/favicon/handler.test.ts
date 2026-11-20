@@ -108,9 +108,7 @@ describe("favicon request handler", () => {
 
     expect(response.status).toBe(200);
     expect(response.headers.get("content-type")).toBe("image/png");
-    expect(response.headers.get("cache-control")).toBe(
-      "public, max-age=604800, stale-while-revalidate=2592000",
-    );
+    expect(response.headers.get("cache-control")).toBe("public, max-age=604800");
     expect(response.headers.get("vary")).toBe("Accept");
     expect(await response.text()).toBe("png");
     expect(fetchCalls).toEqual([ICON_URL]);

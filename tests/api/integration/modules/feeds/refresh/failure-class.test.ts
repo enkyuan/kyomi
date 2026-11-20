@@ -115,7 +115,7 @@ describe("runFeedRefresh failure results", () => {
     expect(result).toMatchObject({ ok: false, failureClass: "http_404", permanent: true });
   });
 
-  test("reports other client errors as http_4xx and rate limiting as retryable", async () => {
+  test("reports other client errors as http_4xx and schedules rate-limited feeds for a later poll", async () => {
     const forbidden = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() => new Response("no", { status: 403 }));
     expect(await runFeedRefresh(forbidden.db as never, "feed-1")).toMatchObject({
@@ -126,7 +126,8 @@ describe("runFeedRefresh failure results", () => {
     const limited = createFeedRefreshDb();
     globalThis.fetch = mockFetch(() => new Response("slow down", { status: 429 }));
     expect(await runFeedRefresh(limited.db as never, "feed-1")).toMatchObject({
-      failureClass: "http_4xx",
+      failureClass: "http_429",
+      retryScheduled: true,
       permanent: false,
     });
   });
@@ -138,6 +139,34 @@ describe("runFeedRefresh failure results", () => {
     const result = await runFeedRefresh(fake.db as never, "feed-1");
 
     expect(result).toMatchObject({ ok: false, failureClass: "http_5xx", permanent: false });
+  });
+
+  test("records a binary response at a feed URL as a completed failure", async () => {
+    const fake = createFeedRefreshDb();
+    globalThis.fetch = mockFetch(() => new Response(new Uint8Array([137, 80, 78, 71, 0])));
+
+    expect(await runFeedRefresh(fake.db as never, "feed-1")).toMatchObject({
+      ok: false,
+      error: "Unsupported feed format",
+    });
+    expect(fake.updates.at(-1)).toMatchObject({
+      refreshStatus: "failed",
+      lastRefreshCompletedAt: expect.any(Date),
+      lastRefreshError: "Unsupported feed format",
+    });
+  });
+
+  test("persists a text diagnostic when a transport includes binary data", async () => {
+    const fake = createFeedRefreshDb();
+    globalThis.fetch = mockFetch(() => {
+      throw new Error("Invalid response\0");
+    });
+
+    await runFeedRefresh(fake.db as never, "feed-1");
+    expect(fake.updates.at(-1)).toMatchObject({
+      refreshStatus: "failed",
+      lastRefreshError: "Feed refresh failed: binary diagnostic",
+    });
   });
 
   test("reports transport failures as retryable network failures", async () => {

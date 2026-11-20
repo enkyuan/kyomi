@@ -28,6 +28,7 @@ export type HtmlFeedFailureClass =
 
 /** Why fetching the feed document failed, derived from the response status or the transport. */
 export type FeedFetchFailureClass =
+  | "http_429"
   | "http_404"
   | "http_4xx"
   | "http_5xx"
@@ -40,6 +41,7 @@ export type FeedRefreshResult = {
   ok: boolean;
   itemCount: number;
   insertedCount?: number;
+  feedBodyCount?: number;
   updatedCount?: number;
   articleExtractionCandidateIds?: string[];
   /** Ids of items written with a KDM document, for the caller to queue enrichment. */
@@ -52,6 +54,7 @@ export type FeedRefreshResult = {
   contentLimitStats?: FeedContentLimitStats;
   // True when the failure cannot be resolved by retrying (e.g. HTTP 4xx other than 408/429).
   permanent?: boolean;
+  retryScheduled?: boolean;
 };
 
 export type FeedIngestDatabase = ReturnType<typeof drizzle<typeof schema>>;
@@ -68,6 +71,8 @@ export type FeedMetadata = {
 export type ParsedFeedItem = {
   id: string;
   stableIdentity: string;
+  /** Current publisher alternatives a recovered full body can supersede on replay. */
+  excerptDigests?: string[];
   canonicalUrl: string;
   title: string;
   link: string;
@@ -131,7 +136,7 @@ export type FetchFeedDocumentResult =
       etag: string | null;
       lastModified: string | null;
     }
-  | { ok: false; error: string; httpStatus?: number };
+  | { ok: false; error: string; httpStatus?: number; retryAfterMs?: number };
 
 export type SearchSyncConfig = {
   url: string;

@@ -1,4 +1,15 @@
-import { Cause, Clock, Deferred, Duration, Effect, Fiber, Random, Result, Schedule } from "effect";
+import {
+  Cause,
+  Clock,
+  Deferred,
+  Duration,
+  Effect,
+  Fiber,
+  FiberSet,
+  Random,
+  Result,
+  Schedule,
+} from "effect";
 import {
   JOBS_CONSUMER_GROUP,
   JOBS_DEAD_LETTER_STREAM_KEY,
@@ -27,8 +38,11 @@ export type StreamConsumer<E extends { readonly message: string }> = {
   readonly streamKey: string;
   /** Entries read per XREADGROUP / XAUTOCLAIM. */
   readonly count: number;
-  /** Jobs from one batch that run at the same time. */
+  /** Maximum jobs in flight for this stream on this worker. */
   readonly concurrency: number;
+  /** Keep long-lived feed handlers occupied across reads. Enable only for a stream whose
+   * pending takeover threshold covers the lifetime of these overlapping jobs. */
+  readonly refillWhileRunning?: boolean;
   readonly streamMaxLength: number;
   /** Entries pending longer than this are taken over from a consumer that died. */
   readonly pendingMinIdleMs?: number;
@@ -99,9 +113,9 @@ function failureOf<E>(cause: Cause.Cause<E>): E | InternalError | undefined {
 
 /**
  * Consume one job stream until `stopping` completes. Each iteration claims abandoned entries or
- * reads new ones on a dedicated blocking connection, then runs the batch with bounded concurrency.
+ * reads new ones on a dedicated blocking connection, up to the number of free handler slots.
  * Redis failures are logged and retried with backoff (and never stop the other streams); a failing
- * job never fails the loop. After `stopping`, the batch in hand finishes and the loop returns.
+ * job never fails the loop. After `stopping`, jobs already in hand drain before the loop returns.
  */
 const consumeStream = <E extends { readonly message: string }>(
   options: StreamConsumer<E>,
@@ -153,29 +167,30 @@ const consumeStream = <E extends { readonly message: string }>(
         ensureConsumerGroup(client, JOBS_CONSUMER_GROUP, options.streamKey),
       );
 
-      const nextEntries = Effect.gen(function* () {
-        const pending = yield* redis.use("xautoclaim", (client) =>
-          claimPendingEntries(client, {
-            streamKey: options.streamKey,
-            group: JOBS_CONSUMER_GROUP,
-            consumer: options.consumer,
-            minIdleMs: options.pendingMinIdleMs ?? DEFAULT_PENDING_MIN_IDLE_MS,
-            count: options.count,
-          }),
-        );
-        if (pending.length > 0) {
-          return pending;
-        }
-        return yield* blocking.use("xreadgroup", (client) =>
-          readNewEntries(client, {
-            streamKey: options.streamKey,
-            group: JOBS_CONSUMER_GROUP,
-            consumer: options.consumer,
-            count: options.count,
-            blockMs: options.blockMs ?? DEFAULT_BLOCK_MS,
-          }),
-        );
-      });
+      const nextEntries = (count: number) =>
+        Effect.gen(function* () {
+          const pending = yield* redis.use("xautoclaim", (client) =>
+            claimPendingEntries(client, {
+              streamKey: options.streamKey,
+              group: JOBS_CONSUMER_GROUP,
+              consumer: options.consumer,
+              minIdleMs: options.pendingMinIdleMs ?? DEFAULT_PENDING_MIN_IDLE_MS,
+              count,
+            }),
+          );
+          if (pending.length > 0) {
+            return pending;
+          }
+          return yield* blocking.use("xreadgroup", (client) =>
+            readNewEntries(client, {
+              streamKey: options.streamKey,
+              group: JOBS_CONSUMER_GROUP,
+              consumer: options.consumer,
+              count,
+              blockMs: options.blockMs ?? DEFAULT_BLOCK_MS,
+            }),
+          );
+        });
 
       /** A Redis failure while settling leaves the entry pending, so it is delivered again. */
       const settle = (operation: string, id: string, run: Effect.Effect<void, RedisError>) =>
@@ -275,13 +290,42 @@ const consumeStream = <E extends { readonly message: string }>(
         yield* redis.use("promote_retries", (client) => promoteDueRetries(client, target, now));
       });
 
+      const active = yield* FiberSet.make<void>();
       const iteration = Effect.gen(function* () {
+        // Only this reader adds jobs. Waiting on their completion observes the first free
+        // slot without cancelling the other handlers or accumulating a local pending queue.
+        const running = Array.from(active);
+        if (running.length >= options.concurrency) {
+          yield* Effect.raceAll(running.map((fiber) => Fiber.await(fiber)));
+        }
+        if (yield* isStopped) return;
+        const remaining = options.concurrency - (yield* FiberSet.size(active));
+        if (remaining < 1) return;
         yield* promoteRetries;
-        const entries = yield* nextEntries;
-        yield* Effect.forEach(entries, processEntry, {
-          concurrency: options.concurrency,
-          discard: true,
-        });
+        const entries = yield* nextEntries(
+          options.refillWhileRunning ? Math.min(options.count, remaining) : options.count,
+        );
+        if (!options.refillWhileRunning) {
+          return yield* Effect.forEach(entries, processEntry, {
+            concurrency: options.concurrency,
+            discard: true,
+          });
+        }
+        for (const entry of entries) {
+          yield* FiberSet.run(
+            active,
+            processEntry(entry).pipe(
+              Effect.catchDefect((defect) =>
+                log.error("worker.job.settle_failed", {
+                  ...context,
+                  streamId: entry[0],
+                  operation: "process",
+                  error: serializeError(defect),
+                }),
+              ),
+            ),
+          );
+        }
       }).pipe(
         // The group is gone when Redis lost its data; recreate it and carry on.
         Effect.catchIf(
@@ -311,6 +355,7 @@ const consumeStream = <E extends { readonly message: string }>(
       while (!(yield* isStopped)) {
         yield* recover(iteration).pipe(Effect.ignore);
       }
+      yield* FiberSet.awaitEmpty(active);
       yield* log.info("worker.stream.stopped", context);
     }),
   );

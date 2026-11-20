@@ -70,6 +70,10 @@ const translationWorkerUrl = httpsUrlFromEnv.refine(
 );
 const FEATURE_CREDENTIAL_RULES: readonly FeatureCredentialRule[] = [
   {
+    flag: "GARAGE_S3_ENDPOINT",
+    credentials: ["GARAGE_S3_BUCKET", "GARAGE_S3_ACCESS_KEY", "GARAGE_S3_SECRET_KEY"],
+  },
+  {
     flag: "FEATURE_ARTICLE_TRANSLATIONS",
     credentials: ["CLOUDFLARE_TRANSLATIONS_URL", "CLOUDFLARE_TRANSLATIONS_TOKEN"],
   },
@@ -239,13 +243,25 @@ export function loadEnv(source: RawEnv = process.env) {
       RESEND_API_KEY: z.string().min(1).optional(),
       LOG_LEVEL: z.enum(["info", "warn", "error"]).optional(),
       OPENAPI_ENABLED: booleanFromEnv.default(nodeEnv !== "production"),
+      GARAGE_S3_ENDPOINT: z.url({ protocol: /^https?$/ }).optional(),
+      GARAGE_S3_BUCKET: z.string().min(1).optional(),
+      GARAGE_S3_ACCESS_KEY: z.string().min(1).optional(),
+      GARAGE_S3_SECRET_KEY: z.string().min(1).optional(),
       MEILI_URL: z.string().min(1).optional(),
       MEILI_MASTER_KEY: z.string().min(1).optional(),
       MEILI_INDEX_FEEDS: z.string().min(1).optional(),
+      FEED_REFRESH_TICK_MS: z.coerce.number().int().min(1000).max(3600000).default(5000),
+      CATALOG_REFRESH_INTERVAL_MS: z.coerce.number().int().min(60000).default(86400000),
+      SUBSCRIBED_REFRESH_INTERVAL_MS: z.coerce.number().int().min(60000).default(3600000),
       GLOBAL_FEED_REFRESH_ENABLED: booleanFromEnv.default(nodeEnv !== "production"),
       SUBSCRIBED_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().positive().max(5_000).default(50),
-      GLOBAL_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().min(0).max(1_000).default(10),
-      GLOBAL_FEED_REFRESH_MAX_QUEUED: z.coerce.number().int().positive().max(1_000_000).default(25),
+      GLOBAL_FEED_REFRESH_BATCH_SIZE: z.coerce.number().int().min(0).max(1_000).default(64),
+      GLOBAL_FEED_REFRESH_MAX_QUEUED: z.coerce
+        .number()
+        .int()
+        .positive()
+        .max(1_000_000)
+        .default(128),
       FEED_REFRESH_QUEUED_LEASE_MS: z.coerce
         .number()
         .int()
@@ -273,7 +289,7 @@ export function loadEnv(source: RawEnv = process.env) {
         "jobs:document-enrichment",
         "jobs:article-translation",
       ]),
-      FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(5_000),
+      FEED_FETCH_HOST_LEASE_MS: z.coerce.number().int().min(1_000).max(60_000).default(30_000),
       FEED_FETCH_HOST_RETRY_DELAY_MS: z.coerce.number().int().min(10).max(5_000).default(250),
       /** Comma-separated Better Auth user ids allowed to call `PUT|DELETE /feeds/:feedId/admin`. */
       FEED_ADMIN_USER_IDS: z.string().optional(),

@@ -133,6 +133,11 @@ export const makeJobHandler = Effect.gen(function* () {
             },
             {
               hostRateLimiter,
+              refreshIntervalMs: config.SUBSCRIBED_REFRESH_INTERVAL_MS,
+              catalogRefreshIntervalMs:
+                job.payload.reason === "global_scheduled"
+                  ? config.CATALOG_REFRESH_INTERVAL_MS
+                  : undefined,
               refreshGeneration: job.payload.generation,
               // Best-effort embedding classification runs alongside the keyword classifier when a
               // key is configured; absent means refresh proceeds with the keyword classifier only.
@@ -208,7 +213,7 @@ export const makeJobHandler = Effect.gen(function* () {
         notModified: result.notModified ?? false,
         skipped: result.skipped ?? null,
         itemCount: result.itemCount,
-        insertedCount: result.insertedCount,
+        feedBodyCount: result.feedBodyCount,
         updatedCount: result.updatedCount,
         categoryStats: result.categoryStats ?? null,
         contentLimitStats: result.contentLimitStats ?? null,

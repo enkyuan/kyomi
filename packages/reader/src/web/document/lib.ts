@@ -1,6 +1,6 @@
 import type { ReaderEmbedProvider, ReaderImage, ReaderInline } from "../../core/document";
 import { normalizeSafeHttpUrl } from "../../core/url";
-import type { ReaderImageUrlTransformer } from "../html/url-resolve";
+import { transformedImageUrl, type ReaderImageUrlTransformer } from "../html/url-resolve";
 
 /** Compiler anchors are bare slugs; the DOM id gets the same `kyomi-` prefix the HTML path uses. */
 export function anchorId(anchor: string): string {
@@ -20,7 +20,7 @@ export function resolveImageUrl(
   if (!normalized) {
     return null;
   }
-  return normalizeSafeHttpUrl(transformImageUrl?.(normalized) ?? normalized);
+  return transformedImageUrl(normalized, transformImageUrl);
 }
 
 export type ResolvedImage = { src: string; srcSet: string | undefined };
