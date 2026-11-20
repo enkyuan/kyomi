@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { isRedirect } from "@tanstack/react-router";
-import { requireAuth, requireGuest } from "src/routes/-guards";
+import { requireAuth, requireCompletedOnboarding, requireGuest } from "src/routes/-guards";
 
 const authenticated = {
   status: "authenticated" as const,
@@ -21,6 +21,14 @@ function captureRedirect(callback: () => void) {
 describe("auth route guards", () => {
   test("allows authenticated users into protected routes", () => {
     expect(() => requireAuth(authenticated, "/inbox/article?filter=saved")).not.toThrow();
+  });
+
+  test("routes pending accounts to onboarding while keeping the inbox destination", () => {
+    const destination = "/inbox/article?filter=saved#reader";
+    expect(
+      captureRedirect(() => requireCompletedOnboarding("pending", destination)).options,
+    ).toMatchObject({ to: "/onboarding", search: { redirect: destination }, replace: true });
+    expect(() => requireCompletedOnboarding("complete", destination)).not.toThrow();
   });
 
   test("redirects anonymous users to login with their protected destination", () => {

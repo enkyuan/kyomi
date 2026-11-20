@@ -1,7 +1,8 @@
 import { CANONICAL_CATEGORY_LABELS } from "@kyomi/db";
 import { z } from "zod";
 import { Unprocessable } from "@shared/effect/errors";
-import { bundles } from "./options";
+import { starterBundles as bundles } from "@kyomi/ingest/ingestion/starter-bundles";
+import { modelLanguage } from "@kyomi/reader/schemas/translation";
 
 export const handle = z
   .string()
@@ -18,14 +19,11 @@ function selection<T extends string>(choices: readonly T[]) {
 }
 
 export const form = z.strictObject({
-  name: z
-    .string()
-    .trim()
-    .min(1)
-    .max(100)
-    .regex(/^[^\p{Cc}]+$/u, "Enter a name without control characters."),
   username: handle,
-  categories: selection(CANONICAL_CATEGORY_LABELS),
+  categories: selection(CANONICAL_CATEGORY_LABELS).refine(
+    (values) => values.length === 3,
+    "Select 3 interests to continue.",
+  ),
   language: z
     .string()
     .trim()
@@ -38,7 +36,8 @@ export const form = z.strictObject({
         ctx.addIssue({ code: "custom", message: "Enter a valid language tag." });
         return z.NEVER;
       }
-    }),
+    })
+    .refine((locale) => modelLanguage(locale) !== null, "Choose a supported language."),
   bundleIds: selection(bundles.map((bundle) => bundle.id)),
 });
 export const patch = form

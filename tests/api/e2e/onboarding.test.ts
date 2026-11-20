@@ -44,29 +44,30 @@ test.skipIf(!process.env.ONBOARDING_TEST_DATABASE_URL)(
       const second = await login("other_" + email);
       const initial = await request(first);
       expect(initial.headers.get("cache-control")).toContain("no-store");
-      expect(await initial.json()).toMatchObject({ status: "pending", nextField: "name" });
+      expect(await initial.json()).toMatchObject({ status: "pending", nextField: "username" });
       const incomplete = await request(first, "PUT", "/completion");
       expect(incomplete.status).toBe(422);
       expect(await incomplete.json()).toMatchObject({
         error: {
           code: "VALIDATION_ERROR",
           details: {
-            issues: expect.arrayContaining([expect.objectContaining({ path: ["name"] })]),
+            issues: expect.arrayContaining([expect.objectContaining({ path: ["username"] })]),
           },
         },
       });
       const patch = {
-        name: "Reader",
         username: "@" + username.toUpperCase(),
         language: "en-us",
-        categories: ["Technology"],
+        categories: ["Technology", "Design & UX", "Science & Research"],
         bundleIds: ["technology"],
       };
-      expect((await request(first, "PATCH", "", { name: "Reader" })).status).toBe(200);
+      expect((await request(first, "PATCH", "", { name: "Reader" })).status).toBe(422);
+      expect((await request(first, "PATCH", "", { username })).status).toBe(200);
+      expect(await (await request(first, "GET", "/status")).json()).toEqual({ status: "pending" });
       const renewed = await login(email);
       expect(await (await request(renewed)).json()).toMatchObject({
-        draft: { name: "Reader" },
-        nextField: "username",
+        draft: { username },
+        nextField: "categories",
       });
       expect(await (await request(second)).json()).toMatchObject({ draft: {} });
       for (const cookie of [renewed, second])
@@ -85,12 +86,19 @@ test.skipIf(!process.env.ONBOARDING_TEST_DATABASE_URL)(
         status: "complete",
         draft: { username, language: "en-US" },
       });
-      expect((await request(winner, "PATCH", "", { name: "Changed" })).status).toBe(409);
+      expect((await request(winner, "PATCH", "", { language: "es" })).status).toBe(409);
       expect(await (await request(loser)).json()).toMatchObject({ status: "pending" });
-      expect(await (await request(loser, "GET", "/username?username=" + username)).json()).toEqual({
-        username,
-        available: false,
+      expect(await (await request(winner, "GET", "/status")).json()).toEqual({
+        status: "complete",
       });
+      for (let attempt = 0; attempt < 2; attempt++) {
+        expect(
+          await (await request(loser, "GET", "/username?username=" + username)).json(),
+        ).toEqual({
+          username,
+          available: false,
+        });
+      }
       const seeded = await pool.query(
         "select count(*)::int as count from feed_subscriptions join user_onboarding using (user_id) where username = $1",
         [username],
@@ -100,10 +108,10 @@ test.skipIf(!process.env.ONBOARDING_TEST_DATABASE_URL)(
       expect((await request(loser, "PATCH", "", retry)).status).toBe(200);
       expect((await request(loser, "PUT", "/completion")).status).toBe(200);
       const subscriptions = await pool.query(
-        "select u.name, count(s.id)::int as count from users u join user_onboarding o on o.user_id=u.id join feed_subscriptions s on s.user_id=u.id where o.username=$1 group by u.id",
+        "select count(*)::int as count from feed_subscriptions join user_onboarding using (user_id) where username = $1",
         [retry.username],
       );
-      expect(subscriptions.rows).toEqual([{ name: "Reader", count: 8 }]);
+      expect(subscriptions.rows).toEqual([{ count: 8 }]);
       const expiredCookie = await login(email);
       const expiredSession = await auth.api.getSession({
         headers: new Headers({ cookie: expiredCookie }),

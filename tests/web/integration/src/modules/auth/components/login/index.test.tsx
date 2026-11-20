@@ -40,6 +40,7 @@ vi.mock("@integrations/better-auth/provider", () => ({
 
 vi.mock("@tanstack/react-router", () => ({
   useRouter: () => mocks.router,
+  Link: ({ children }: { children: string }) => <a href="/register">{children}</a>,
 }));
 
 vi.mock("@modules/inbox/lib/navigation", () => ({
@@ -93,6 +94,14 @@ afterEach(() => {
 });
 
 describe("Login", () => {
+  test("uses the email input itself as the full field control", () => {
+    renderLogin();
+
+    const email = screen.getByRole("textbox", { name: "Email" });
+    expect(email).toHaveProperty("tagName", "INPUT");
+    expect(email.parentElement?.getAttribute("data-slot")).toBe("field");
+  });
+
   test("keeps Continue loading while the sign-in code is being sent", async () => {
     const send = defer<{ error: null }>();
     mocks.sendVerificationOtp.mockReturnValue(send.promise);

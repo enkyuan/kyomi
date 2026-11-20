@@ -1,0 +1,73 @@
+.bundle-trigger {
+  block-size: var(--bundle-trigger-height);
+}
+
+.bundle-sources {
+  --source-height: 36px;
+  --stack-step: -22px;
+  --stack-angle: -10deg;
+  block-size: 0;
+}
+
+.bundle-sources:dir(rtl) {
+  --stack-step: 22px;
+  --stack-angle: 10deg;
+}
+
+.bundle-source:nth-child(even) {
+  --icon-angle: calc(-1 * var(--stack-angle));
+}
+
+.bundle-source-icon {
+  /* Collapse each icon to the trigger midpoint while keeping the same DOM element. */
+  translate: calc(var(--from-end) * var(--stack-step))
+    calc(var(--bundle-trigger-height) / -2 - (var(--source-index) + 0.5) * var(--source-height));
+  rotate: var(--icon-angle, var(--stack-angle));
+}
+
+:is(.bundle-source-name, .bundle-summary) {
+  opacity: 0;
+}
+
+[data-preview-open] > .bundle-sources {
+  block-size: calc(var(--source-count) * var(--source-height) + 4px);
+}
+
+[data-preview-open] .bundle-source-icon {
+  translate: 0 0;
+  rotate: 0deg;
+}
+
+[data-preview-open] :is(.bundle-source-name, .bundle-summary) {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bundle-sources {
+    transition: block-size 130ms var(--ease-out-quint);
+  }
+
+  .bundle-source-icon {
+    transition:
+      translate 130ms var(--ease-out-quint),
+      rotate 130ms var(--ease-out-quint);
+  }
+
+  :is(.bundle-source-name, .bundle-summary) {
+    transition: opacity 75ms var(--ease-out-quint);
+  }
+
+  [data-preview-open] > .bundle-sources,
+  [data-preview-open] .bundle-source-icon {
+    transition-duration: 180ms;
+  }
+
+  [data-preview-open] :is(.bundle-source-name, .bundle-summary) {
+    transition-duration: 100ms;
+    transition-delay: 35ms;
+  }
+
+  [data-preview-open] .bundle-summary {
+    transition-delay: 50ms;
+  }
+}

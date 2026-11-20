@@ -105,7 +105,7 @@ function RecapCard({ navigate }: { navigate: ReturnType<typeof useInboxRouteStat
     isError: recapError,
     isLoading: recapLoading,
     refetch: refetchRecap,
-  } = useQuery(inboxRecapQueryOptions(10));
+  } = useQuery(inboxRecapQueryOptions());
 
   // Loads with the recap so the rail settles once, instead of growing a row when this arrives.
   const { data: continueReading, isLoading: continueReadingLoading } = useQuery(

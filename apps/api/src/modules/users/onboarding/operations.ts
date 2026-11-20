@@ -6,18 +6,21 @@ import { CurrentUser } from "@shared/effect/request";
 import { currentDate } from "@shared/effect/clock";
 import { inTransaction, subscribeUserToFeed } from "@modules/feeds/subscription/persistence";
 import { Conflict } from "@shared/effect/errors";
-import { bundles } from "./options";
+import { starterBundles as bundles } from "@kyomi/ingest/ingestion/starter-bundles";
 import { form, handle, invalidForm, patch } from "./schemas";
+import type { TakenUsernames } from "./usernames";
 
 type Draft = typeof userOnboarding.$inferSelect.draft;
 
 function state(draft: Draft, completedAt: Date | null) {
-  const fields = ["name", "username", "categories", "language", "bundleIds"] as const;
+  const fields = ["username", "categories", "language", "bundleIds"] as const;
   return {
     status: completedAt ? "complete" : "pending",
     draft,
     completedAt,
-    nextField: completedAt ? null : (fields.find((field) => !draft[field]) ?? null),
+    nextField: completedAt
+      ? null
+      : (fields.find((field) => !form.shape[field].safeParse(draft[field]).success) ?? null),
   };
 }
 
@@ -25,7 +28,9 @@ async function readState(database: Pick<Database, "query">, userId: string) {
   const row = await database.query.userOnboarding.findFirst({
     where: eq(userOnboarding.userId, userId),
   });
-  return state(row?.draft ?? {}, row?.completedAt ?? null);
+  // A legacy draft can still contain a real name. Only return the active onboarding fields.
+  const { username, categories, language, bundleIds } = row?.draft ?? {};
+  return state({ username, categories, language, bundleIds }, row?.completedAt ?? null);
 }
 
 export const getState = Effect.gen(function* () {
@@ -34,10 +39,27 @@ export const getState = Effect.gen(function* () {
   return yield* db.use("onboarding.read", (client) => readState(client, userId));
 });
 
-export const availability = Effect.fn("onboarding.availability")(function* (input: unknown) {
+export const getStatus = Effect.gen(function* () {
+  const { userId } = yield* CurrentUser;
+  const db = yield* Db;
+  const row = yield* db.use("onboarding.status", (client) =>
+    client.query.userOnboarding.findFirst({
+      columns: { completedAt: true },
+      where: eq(userOnboarding.userId, userId),
+    }),
+  );
+  return { status: row?.completedAt ? "complete" : "pending" } as const;
+});
+
+export const availability = Effect.fn("onboarding.availability")(function* (
+  input: unknown,
+  cache: TakenUsernames,
+) {
   const result = handle.safeParse(input);
   if (!result.success) return yield* invalidForm(result.error);
   const username = result.data;
+  const now = (yield* currentDate).getTime();
+  if (cache.has(username, now)) return { username, available: false };
   const db = yield* Db;
   const claimed = yield* db.use("onboarding.lookup", (client) =>
     client.query.userOnboarding.findFirst({
@@ -45,6 +67,7 @@ export const availability = Effect.fn("onboarding.availability")(function* (inpu
       where: eq(userOnboarding.username, username),
     }),
   );
+  if (claimed) cache.add(username, now);
   return { username, available: !claimed };
 });
 
@@ -80,12 +103,8 @@ export const save = Effect.fn("onboarding.save")(function* (
     const completedAt = now;
     await tx
       .update(userOnboarding)
-      .set({ username: validated.username, completedAt })
+      .set({ username: validated.username, draft: validated, completedAt })
       .where(eq(userOnboarding.userId, userId));
-    await tx
-      .update(users)
-      .set({ name: validated.name, updatedAt: completedAt })
-      .where(eq(users.id, userId));
     await tx
       .insert(userPreferences)
       .values({ userId, language: validated.language })

@@ -10,17 +10,21 @@ src/
   hooks/         hooks used by more than one module.
   integrations/  Better Auth, PostHog, and TanStack Query wiring.
   lib/           app-local api, auth, query (client, cache, shared keys), shell, and timezone helpers.
-  modules/       product domains: articles, auth, feeds, folders, inbox, preferences, reader, settings, sidebar.
+  modules/       product domains: articles, auth, feeds, folders, inbox, onboarding, preferences, reader, settings, sidebar.
   routes/        file-based TanStack Router routes and api handlers.
 ```
 
 feature code belongs in `src/modules/*` under its product domain. modules depend on each other in one direction only:
 
 ```text
-sidebar, settings, auth -> inbox -> reader -> articles -> feeds, folders, preferences
+sidebar, settings, auth, onboarding -> inbox -> reader -> articles -> feeds, folders, preferences
 ```
 
 `src/lib`, `src/hooks`, and `src/integrations` sit below every module and never import one. `bun run check:boundaries` fails on a module cycle or an upward import. server functions live in `<module>/lib/api.ts`; query keys shared across modules live in `src/lib/query/keys.ts`.
+
+## onboarding
+
+The signed-in app guard sends pending accounts to `/onboarding` and preserves their validated inbox destination. The separate route loads the API draft for the current session and saves each step through a module-owned server function. The final step runs its subscription save and inbox preload in a Glimm scope shared by both routes. The right-to-left sweep reveals the destination once the subscriptions and first inbox page are ready. Glimm uses HTML-in-Canvas where available and handles reduced motion and browser fallbacks.
 
 ## commands
 

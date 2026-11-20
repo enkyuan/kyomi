@@ -7,7 +7,6 @@ export const userOnboarding = pgTable("user_onboarding", {
     .references(() => users.id, { onDelete: "cascade" }),
   draft: jsonb("draft")
     .$type<{
-      name?: string;
       username?: string;
       categories?: string[];
       language?: string;
