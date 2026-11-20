@@ -17,6 +17,9 @@ parameters:
   catalog:
     type: boolean
     default: false
+  mobile:
+    type: boolean
+    default: false
 
 executors:
   bun:
@@ -213,25 +216,53 @@ jobs:
       - store_test_results:
           path: test-results
 
-  build:
+  # Web and marketing site builds plus the checks on their output (breakpoint CSS, bundle budget).
+  build-web:
     executor: bun
     steps:
       - checkout
-      - setup-bun
+      - setup-bun:
+          prefetch: false
       - restore-turbo:
           scope: build
       - run:
-          name: Build workspaces
+          name: Build web and www, check output
           no_output_timeout: 10m
-          command: |
-            nproc; free -m | head -2
-            bun scripts/ci/prepare-env.ts
-            export EXPO_PUBLIC_AUTH_ORIGIN=https://ci.kyomi.invalid SKIP_ENV_VALIDATION=true
-            for w in web www mobile; do
-              s=$(date +%s); timeout 15m bun run --cwd apps/$w build; echo "PROFILE $w exit=$? $(( $(date +%s)-s ))s"
-            done
+          command: timeout 15m bun run ci:build:web
       - save-turbo:
           scope: build
+
+  # The Expo export is the slowest build. A PR runs it only when mobile code or a shared package
+  # changed, and exports iOS alone (Metro bundles Android from the same sources); main exports
+  # every platform.
+  build-mobile:
+    executor: bun
+    steps:
+      - when:
+          condition:
+            or:
+              - << pipeline.parameters.mobile >>
+              - equal: [main, << pipeline.git.branch >>]
+          steps:
+            - checkout
+            - setup-bun:
+                prefetch: false
+            - run:
+                name: Export mobile bundles
+                no_output_timeout: 10m
+                command: |
+                  platform=ios
+                  [ "<< pipeline.git.branch >>" = main ] && platform=all
+                  timeout 15m env MOBILE_PLATFORM="$platform" bun run ci:build:mobile
+      - unless:
+          condition:
+            or:
+              - << pipeline.parameters.mobile >>
+              - equal: [main, << pipeline.git.branch >>]
+          steps:
+            - run:
+                name: Nothing relevant changed
+                command: echo "No mobile-relevant changes; skipping."
 
   # Image smoke builds are the slowest job and mostly fail on Dockerfile,
   # .dockerignore or manifest changes, so a PR builds them only for those;
@@ -303,15 +334,14 @@ workflows:
   ci:
     when: << pipeline.parameters.app >>
     jobs:
-      # Static checks are the cheapest and catch most failures, so the
-      # expensive jobs wait for them instead of burning credits in parallel.
+      # Nothing waits for `static-quality` except the image build: every job starts at once so the
+      # pipeline takes as long as its slowest job, not the sum of two stages. A failed static check
+      # still fails the pipeline; it just no longer saves the parallel jobs' credits.
       - static-quality
-      - web-tests:
-          requires: [static-quality]
-      - api-tests:
-          requires: [static-quality]
-      - build:
-          requires: [static-quality]
+      - web-tests
+      - api-tests
+      - build-web
+      - build-mobile
       - docker-build:
           requires: [static-quality]
       - catalog-typecheck
@@ -320,7 +350,8 @@ workflows:
             - static-quality
             - web-tests
             - api-tests
-            - build
+            - build-web
+            - build-mobile
             - docker-build
             - catalog-typecheck
 
