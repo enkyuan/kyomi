@@ -18,7 +18,7 @@ import { VirtualizedRows, SkeletonRows, type RowsPaginationState } from "./rows"
 const EMPTY_STATE_BODY_COPY =
   "Follow feeds to start building your reading list. New stories will show up here as they're published.";
 
-export function getEmptyStateCopy(filter: InboxFilter) {
+function getEmptyStateCopy(filter: InboxFilter) {
   switch (filter) {
     case "my-feed":
       return {
@@ -52,11 +52,8 @@ export function getEmptyStateCopy(filter: InboxFilter) {
   }
 }
 
-type EmptyStateCopy = ReturnType<typeof getEmptyStateCopy>;
-
 export function ListBody({
   density,
-  emptyState,
   filter,
   fontSizePx,
   inboxItems,
@@ -77,7 +74,6 @@ export function ListBody({
   onSelectItem,
 }: {
   density: InboxDensityDto;
-  emptyState: EmptyStateCopy;
   filter: InboxFilter;
   fontSizePx: number;
   inboxItems: InboxItem[];
@@ -97,9 +93,11 @@ export function ListBody({
   onIntentItem?: (item: InboxItem) => void;
   onSelectItem: (item: InboxItem) => void;
 }) {
+  const emptyState = showEmptyState && getEmptyStateCopy(filter);
+
   return (
     <div className={showEmptyState ? "flex flex-1 flex-col" : ""}>
-      {showEmptyState ? (
+      {emptyState ? (
         <Empty className="w-full px-5.5" size="md">
           <EmptyHeader>
             <EmptyMedia variant="illustration">
