@@ -81,16 +81,16 @@ function note(node: ts.JsxOpeningElement | ts.JsxSelfClosingElement, file: ts.So
 }
 
 const files = [...new Glob("src/**/*.tsx").scanSync({ cwd: root })].sort();
+const sources = await Promise.all(
+  files.map(async (path) => {
+    const absolute = resolve(root, path);
+    return { path, absolute, text: await Bun.file(absolute).text() };
+  }),
+);
 const sections: string[] = [];
 let count = 0;
-for (const path of files) {
-  const absolute = resolve(root, path);
-  const source = ts.createSourceFile(
-    absolute,
-    await Bun.file(absolute).text(),
-    ts.ScriptTarget.Latest,
-    true,
-  );
+for (const { path, absolute, text } of sources) {
+  const source = ts.createSourceFile(absolute, text, ts.ScriptTarget.Latest, true);
   const notes: string[] = [];
   function visit(node: ts.Node) {
     if (ts.isJsxOpeningElement(node) || ts.isJsxSelfClosingElement(node)) {
