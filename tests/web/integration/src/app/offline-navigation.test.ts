@@ -18,7 +18,7 @@ test("a cold offline inbox navigation gets the public shell; private API respons
   vi.stubGlobal("fetch", vi.fn().mockRejectedValue(new TypeError("offline")));
   vi.stubGlobal("__STATIC_ASSET_URLS__", ["/offline.html", "/offline-reader.js"]);
   vi.stubGlobal("__SW_VERSION__", "test");
-  await import("../../../../../apps/web/service-worker");
+  await vi.importActual("../../../../../apps/web/service-worker");
   const send = vi.fn();
   const open = (path: string) =>
     listeners.get("fetch")!({
